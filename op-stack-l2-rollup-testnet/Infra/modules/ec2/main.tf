@@ -1,3 +1,12 @@
+resource "aws_eip" "op_stack_node_static_ip" {
+  domain   = "vpc"
+  instance = aws_instance.op_stack_node.id
+
+  tags = {
+    Name = "${var.instance_name}-eip"
+  }
+}
+
 resource "aws_instance" "op_stack_node" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = var.instance_type
@@ -25,7 +34,12 @@ data "aws_ami" "ubuntu" {
 
   filter {
     name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-22.04-amd64-server-*"]
+    values = ["ubuntu/images/hvm-ssd/ubuntu-*-amd64-server-*"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
   }
 }
 

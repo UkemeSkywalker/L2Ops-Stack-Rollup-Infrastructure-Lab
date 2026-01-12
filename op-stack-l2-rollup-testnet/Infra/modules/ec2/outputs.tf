@@ -3,7 +3,7 @@ output "instance_id" {
 }
 
 output "public_ip" {
-  value = aws_instance.op_stack_node.public_ip
+  value = aws_eip.op_stack_node_static_ip.public_ip
 }
 
 output "private_ip" {
