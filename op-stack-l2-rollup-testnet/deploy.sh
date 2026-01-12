@@ -4,7 +4,7 @@ set -e
 echo "🚀 Starting L2 Rollup Infrastructure Deployment..."
 
 # Change to Infra directory
-cd "OP Stack L2 rollup testnet/Infra"
+cd "./Infra"
 
 # Initialize Terraform
 echo "📦 Initializing Terraform..."

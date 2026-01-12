@@ -1,13 +1,13 @@
 variable "allowed_tcp_ports" {
   description = "List of TCP ports to allow"
   type        = list(number)
-  default     = [8545, 8546]
+  default     = [8545, 8546, 8547, 8548, 8551, 8560, 9222, 30303]
 }
 
 variable "allowed_udp_ports" {
   description = "List of UDP ports to allow"
   type        = list(number)
-  default     = []
+  default     = [9222, 30303]
 }
 
 variable "region" {
@@ -28,8 +28,8 @@ variable "instance_name" {
   default     = "opstack-l2-rollup-node"
 }
 
-variable "key_name" {
-  description = "AWS key pair name for SSH access"
+variable "ssh_public_key_path" {
+  description = "Path to your local SSH public key file"
   type        = string
-  default     = null
+  default     = "~/.ssh/op-node-key.pub"
 }
