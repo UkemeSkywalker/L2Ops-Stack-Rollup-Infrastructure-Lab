@@ -1,1 +1,10 @@
+# Terraform
 .terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+.terraform.lock.hcl
+
+# Ansible
+inventory_actual.ini

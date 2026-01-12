@@ -3,7 +3,7 @@
   hosts: pow_faucet_nodes
   become: yes
   vars:
-    nodejs_version: "18"
+    nodejs_version: "24"
     
   tasks:
     - name: Update apt cache
