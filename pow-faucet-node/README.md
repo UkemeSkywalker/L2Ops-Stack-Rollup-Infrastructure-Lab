@@ -15,13 +15,18 @@ This directory contains Terraform infrastructure and Ansible configuration for d
 - AWS CLI configured with appropriate credentials
 - Terraform installed
 - Ansible installed
-- SSH key pair generated
+- SSH key pair generated locally
 
 ## Deployment
 
 ### Quick Deploy
 ```bash
 ./deploy.sh [path_to_ssh_private_key]
+```
+
+Example:
+```bash
+./deploy.sh ~/.ssh/id_rsa
 ```
 
 ### Manual Deploy

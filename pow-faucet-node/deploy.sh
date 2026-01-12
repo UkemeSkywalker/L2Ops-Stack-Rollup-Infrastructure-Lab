@@ -46,7 +46,7 @@ sed "s/{{ public_ip }}/$ELASTIC_IP/g; s|{{ ssh_key_path }}|$SSH_KEY_PATH|g" inve
 
 # Wait for instance to be ready
 echo "⏳ Waiting for instance to be ready..."
-sleep 60
+sleep 120
 
 # Run Ansible playbook
 echo "🔧 Running Ansible playbook..."
